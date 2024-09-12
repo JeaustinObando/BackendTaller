@@ -13,7 +13,7 @@ const addTask = (req, res) => {
     let task = new TASK({
         name: req.body.name,
         descripcion: req.body.descripcion,
-        status: true
+        status: false
     });
     task.save((err, newtask) => {
         err && res.status(500).send(err.message);
